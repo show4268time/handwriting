@@ -1,5 +1,7 @@
 package com.showtime.ioc;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * Created with IntelliJ IDEA
  *
@@ -10,4 +12,13 @@ package com.showtime.ioc;
  * @modified by:
  */
 public class BeanFactory {
+    private ConcurrentHashMap<String, BeanDefinition> beanDefinitionConcurrentHashMap = new ConcurrentHashMap<String, BeanDefinition>();
+
+    public void registerBeanDefinition(String name , BeanDefinition beanDefinition){
+        beanDefinitionConcurrentHashMap.put(name, beanDefinition);
+    }
+
+    public Object getBean(String name){
+        return beanDefinitionConcurrentHashMap.get(name);
+    }
 }
