@@ -19,6 +19,6 @@ public class BeanFactory {
     }
 
     public Object getBean(String name){
-        return beanDefinitionConcurrentHashMap.get(name);
+        return beanDefinitionConcurrentHashMap.get(name).getBean();
     }
 }

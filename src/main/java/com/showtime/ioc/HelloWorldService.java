@@ -12,6 +12,6 @@ package com.showtime.ioc;
 public class HelloWorldService {
 
     public void helloWorld(){
-        System.out.print("Hello World");
+        System.out.print("Hello World! ");
     }
 }
