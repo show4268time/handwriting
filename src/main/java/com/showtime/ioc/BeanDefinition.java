@@ -1,5 +1,6 @@
 package com.showtime.ioc;
 
+
 /**
  * Created with IntelliJ IDEA
  *
@@ -10,13 +11,42 @@ package com.showtime.ioc;
  * @modified by:
  */
 public class BeanDefinition {
-    private Object object;
+    private Object bean;
 
-    public BeanDefinition(Object object){
-        this.object = object;
+    private Class beanClass;
+
+    private String className;
+
+    public BeanDefinition(){
+
     }
 
-    public Object getBean(){
-        return object;
+    public Object getBean() {
+        return bean;
+    }
+
+    public void setBean(Object bean) {
+        this.bean = bean;
+    }
+
+    public Class getBeanClass() {
+        return beanClass;
+    }
+
+    public void setBeanClass(Class beanClass) {
+        this.beanClass = beanClass;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
+        try {
+            this.beanClass = Class.forName(className);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
