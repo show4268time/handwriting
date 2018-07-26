@@ -11,7 +11,13 @@ package com.showtime.ioc;
  */
 public class HelloWorldService {
 
+    private String text;
+
     public void helloWorld(){
-        System.out.print("Hello World! ");
+        System.out.print(text);
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }
