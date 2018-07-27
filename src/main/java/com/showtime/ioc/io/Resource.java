@@ -13,5 +13,6 @@ import java.io.InputStream;
  * @modified by:
  */
 public interface Resource {
+
     InputStream getInputStream() throws IOException;
 }

@@ -15,6 +15,7 @@ import java.net.URLConnection;
  * @modified by:
  */
 public class UrlResource implements Resource {
+
     private final URL url;
 
     public UrlResource(URL url){
