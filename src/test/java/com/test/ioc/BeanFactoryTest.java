@@ -1,9 +1,7 @@
 package com.test.ioc;
 
 import com.showtime.ioc.BeanDefinition;
-import com.showtime.ioc.HelloWorldService;
-import com.showtime.ioc.PropertyValue;
-import com.showtime.ioc.PropertyValues;
+import com.showtime.ioc.service.HelloWorldService;
 import com.showtime.ioc.factory.AutowireCapableBeanFactory;
 import com.showtime.ioc.factory.BeanFactory;
 import com.showtime.ioc.io.ResourceLoader;

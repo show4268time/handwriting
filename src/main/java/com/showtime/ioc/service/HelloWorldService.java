@@ -1,4 +1,4 @@
-package com.showtime.ioc;
+package com.showtime.ioc.service;
 
 /**
  * Created with IntelliJ IDEA
@@ -10,14 +10,19 @@ package com.showtime.ioc;
  * @modified by:
  */
 public class HelloWorldService {
-
     private String text;
 
+    private OutputService outputService;
+
     public void helloWorld(){
-        System.out.print(text);
+        outputService.output(text);
     }
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public void setOutputService(OutputService outputService) {
+        this.outputService = outputService;
     }
 }
