@@ -17,7 +17,7 @@ public class BeanDefinition {
 
     private String className;
 
-    private PropertyValues propertyValues;
+    private PropertyValues propertyValues = new PropertyValues();
 
     public BeanDefinition(){
 
