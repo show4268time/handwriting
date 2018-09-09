@@ -1,5 +1,6 @@
 package com.showtime.test;
 
+import com.showtime.ioc.AutowireCapableBeanFactory;
 import com.showtime.ioc.BeanDefinition;
 import com.showtime.ioc.BeanFactory;
 import com.showtime.ioc.HelloWorldService;
@@ -19,10 +20,11 @@ public class BeanFactoryTest {
     @Test
     public void Test() {
         //初始化BeanFactory
-        BeanFactory beanFactory = new BeanFactory();
+        BeanFactory beanFactory = new AutowireCapableBeanFactory();
 
         //注入bean
-        BeanDefinition beanDefinition = new BeanDefinition(new HelloWorldService());
+        BeanDefinition beanDefinition = new BeanDefinition();
+        beanDefinition.setBeanClassName("com.showtime.ioc.HelloWorldService");
         beanFactory.registerBeanDefinition("helloWorldService", beanDefinition);
 
         //获取bean

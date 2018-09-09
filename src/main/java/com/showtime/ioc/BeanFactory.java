@@ -1,26 +1,13 @@
 package com.showtime.ioc;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
- * Created with IntelliJ IDEA
- *
- * @description:
- * @author: yaoweihao
- * @date: 2018/9/7
- * @time: 16:02
- * @modified by:
- */
-public class BeanFactory {
-    private Map<String, BeanDefinition> beanDefinitionMap = new HashMap<String, BeanDefinition>();
+ * @program: handwriting-spring
+ * @description: BeanFactory替换成接口
+ * @author: showtime
+ * @create: 2018-09-08 11:35
+ **/
+public interface BeanFactory {
+    void  registerBeanDefinition(String name, BeanDefinition beanDefinition);
 
-    public void registerBeanDefinition(String name, BeanDefinition beanDefinition){
-        beanDefinitionMap.put(name, beanDefinition);
-    }
-
-
-    public Object getBean(String name){
-        return beanDefinitionMap.get(name).getBean();
-    }
+    Object getBean(String name);
 }
