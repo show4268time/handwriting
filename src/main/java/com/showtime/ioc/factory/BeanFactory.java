@@ -1,4 +1,6 @@
-package com.showtime.ioc;
+package com.showtime.ioc.factory;
+
+import com.showtime.ioc.BeanDefinition;
 
 /**
  * @program: handwriting-spring
@@ -7,7 +9,7 @@ package com.showtime.ioc;
  * @create: 2018-09-08 11:35
  **/
 public interface BeanFactory {
-    void  registerBeanDefinition(String name, BeanDefinition beanDefinition);
+    void  registerBeanDefinition(String name, BeanDefinition beanDefinition) throws Exception;
 
     Object getBean(String name);
 }

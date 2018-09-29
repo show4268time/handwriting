@@ -3,7 +3,7 @@ package com.showtime.ioc;
 /**
  * Created with IntelliJ IDEA
  *
- * @description:
+ * @description: bean的内容及元数据，保存在BeanFactory中，包装bean的实体
  * @author: yaoweihao
  * @date: 2018/9/7
  * @time: 15:55
@@ -15,6 +15,8 @@ public class BeanDefinition {
     private Class beanClass;
 
     private String beanClassName;
+
+    private PropertyValues propertyValues;
 
 
     public Object getBean() {
@@ -45,5 +47,13 @@ public class BeanDefinition {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    public PropertyValues getPropertyValues() {
+        return propertyValues;
+    }
+
+    public void setPropertyValues(PropertyValues propertyValues) {
+        this.propertyValues = propertyValues;
     }
 }

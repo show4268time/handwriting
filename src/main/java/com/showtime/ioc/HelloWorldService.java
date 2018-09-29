@@ -10,7 +10,18 @@ package com.showtime.ioc;
  * @modified by:
  */
 public class HelloWorldService {
+
+    private String text;
+
     public void helloWorld(){
-        System.out.println("Hello World!");
+        System.out.println(text);
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }

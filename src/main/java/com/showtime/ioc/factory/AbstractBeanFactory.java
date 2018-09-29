@@ -1,4 +1,6 @@
-package com.showtime.ioc;
+package com.showtime.ioc.factory;
+
+import com.showtime.ioc.BeanDefinition;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,7 +17,7 @@ import java.util.Map;
 public abstract class AbstractBeanFactory implements BeanFactory{
     private Map<String, BeanDefinition> beanDefinitionMap = new HashMap<String, BeanDefinition>();
 
-    public void registerBeanDefinition(String name, BeanDefinition beanDefinition){
+    public void registerBeanDefinition(String name, BeanDefinition beanDefinition) throws Exception{
         Object bean = doCreateBean(beanDefinition);
         beanDefinition.setBean(bean);
         beanDefinitionMap.put(name, beanDefinition);
@@ -26,5 +28,5 @@ public abstract class AbstractBeanFactory implements BeanFactory{
         return beanDefinitionMap.get(name).getBean();
     }
 
-    public abstract Object doCreateBean(BeanDefinition beanDefinition);
+    public abstract Object doCreateBean(BeanDefinition beanDefinition) throws Exception;
 }
