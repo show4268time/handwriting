@@ -2,8 +2,11 @@ package com.showtime.ioc.xml;
 
 import com.showtime.ioc.AbstractBeanDefinitionReader;
 import com.showtime.ioc.BeanDefinition;
+import com.showtime.ioc.BeanReference;
 import com.showtime.ioc.PropertyValue;
 import com.showtime.ioc.io.ResourceLoader;
+import org.apache.commons.lang3.StringUtils;
+import org.junit.Assert;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -76,7 +79,14 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
                 Element property = (Element) node;
                 String name = property.getAttribute("name");
                 String value = property.getAttribute("value");
-                beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, value));
+                if (StringUtils.isNotBlank(value)) {
+                    beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, value));
+                } else {
+                    String ref = property.getAttribute("ref");
+                    Assert.assertTrue(StringUtils.isNotBlank(ref));
+                    BeanReference beanReference = new BeanReference(ref);
+                    beanDefinition.getPropertyValues().addPropertyValue(new PropertyValue(name, beanReference));
+                }
             }
         }
     }
