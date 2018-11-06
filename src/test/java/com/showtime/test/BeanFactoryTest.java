@@ -6,7 +6,11 @@ import com.showtime.ioc.factory.AutowireCapableBeanFactory;
 import com.showtime.ioc.BeanDefinition;
 import com.showtime.ioc.factory.BeanFactory;
 import com.showtime.ioc.HelloWorldService;
+import com.showtime.ioc.io.ResourceLoader;
+import com.showtime.ioc.xml.XmlBeanDefinitionReader;
 import org.junit.Test;
+
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA
@@ -21,20 +25,16 @@ public class BeanFactoryTest {
 
     @Test
     public void Test() throws Exception {
-        //初始化BeanFactory
+
+        XmlBeanDefinitionReader xmlBeanDefinitionReader = new XmlBeanDefinitionReader(new ResourceLoader());
+        xmlBeanDefinitionReader.loadBeanDefinitions("tinyioc.xml");
+
         BeanFactory beanFactory = new AutowireCapableBeanFactory();
+        for (Map.Entry<String, BeanDefinition> entry : xmlBeanDefinitionReader.getRegistry().entrySet()) {
+            beanFactory.registerBeanDefinition(entry.getKey(), entry.getValue());
+        }
 
-        //注入bean
-        BeanDefinition beanDefinition = new BeanDefinition();
-        beanDefinition.setBeanClassName("com.showtime.ioc.HelloWorldService");
-        PropertyValue propertyValue = new PropertyValue("text", "Hello World!");
-        PropertyValues propertyValues = new PropertyValues();
-        propertyValues.addPropertyValue(propertyValue);
-        beanDefinition.setPropertyValues(propertyValues);
-
-        beanFactory.registerBeanDefinition("helloWorldService", beanDefinition);
-
-        //获取bean
+        // 3.获取bean
         HelloWorldService helloWorldService = (HelloWorldService) beanFactory.getBean("helloWorldService");
         helloWorldService.helloWorld();
     }
