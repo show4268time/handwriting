@@ -9,7 +9,6 @@ import com.showtime.ioc.BeanDefinition;
  * @create: 2018-09-08 11:35
  **/
 public interface BeanFactory {
-    void  registerBeanDefinition(String name, BeanDefinition beanDefinition) throws Exception;
 
     Object getBean(String name) throws Exception;
 }

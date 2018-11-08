@@ -2,6 +2,7 @@ package com.showtime.test;
 
 import com.showtime.ioc.PropertyValue;
 import com.showtime.ioc.PropertyValues;
+import com.showtime.ioc.factory.AbstractBeanFactory;
 import com.showtime.ioc.factory.AutowireCapableBeanFactory;
 import com.showtime.ioc.BeanDefinition;
 import com.showtime.ioc.factory.BeanFactory;
@@ -29,7 +30,7 @@ public class BeanFactoryTest {
         XmlBeanDefinitionReader xmlBeanDefinitionReader = new XmlBeanDefinitionReader(new ResourceLoader());
         xmlBeanDefinitionReader.loadBeanDefinitions("tinyioc.xml");
 
-        BeanFactory beanFactory = new AutowireCapableBeanFactory();
+        AbstractBeanFactory beanFactory = new AutowireCapableBeanFactory();
         for (Map.Entry<String, BeanDefinition> entry : xmlBeanDefinitionReader.getRegistry().entrySet()) {
             beanFactory.registerBeanDefinition(entry.getKey(), entry.getValue());
         }
