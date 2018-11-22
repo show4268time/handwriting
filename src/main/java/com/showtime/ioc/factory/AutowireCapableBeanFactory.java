@@ -7,7 +7,7 @@ import com.showtime.ioc.PropertyValue;
 import java.lang.reflect.Field;
 
 /**
- * @program: handwriting-spring
+ * @program: handwriting
  * @description: 自动装配bean工厂
  * @author: showtime
  * @create: 2018-09-09 10:05

@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @program: handwriting-spring
+ * @program: handwriting
  * @description: 在doGet方法中获取系统当前时间，并将其放到HttpServletRequest对象中，最后转发到/WEB-INF/jsp/hello.jsp页面
  * @author: showtime
  * @create: 2018-09-02 22:54

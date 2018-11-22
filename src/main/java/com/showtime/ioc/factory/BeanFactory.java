@@ -3,7 +3,7 @@ package com.showtime.ioc.factory;
 import com.showtime.ioc.BeanDefinition;
 
 /**
- * @program: handwriting-spring
+ * @program: handwriting
  * @description: BeanFactory替换成接口
  * @author: showtime
  * @create: 2018-09-08 11:35
