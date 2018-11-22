@@ -3,7 +3,7 @@ package com.showtime.aop;
 /**
  * Created with IntelliJ IDEA
  *
- * @description:
+ * @description: 代理接口
  * @author: yaoweihao
  * @date: 2018/11/12
  * @time: 15:33
