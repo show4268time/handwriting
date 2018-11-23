@@ -1,8 +1,8 @@
 package com.showtime.test.xml;
 
-import com.showtime.ioc.BeanDefinition;
-import com.showtime.ioc.io.ResourceLoader;
-import com.showtime.ioc.xml.XmlBeanDefinitionReader;
+import com.showtime.spring.ioc.BeanDefinition;
+import com.showtime.spring.ioc.io.ResourceLoader;
+import com.showtime.spring.ioc.xml.XmlBeanDefinitionReader;
 import org.junit.Assert;
 import org.junit.Test;
 

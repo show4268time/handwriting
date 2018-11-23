@@ -1,14 +1,11 @@
 package com.showtime.test;
 
-import com.showtime.ioc.PropertyValue;
-import com.showtime.ioc.PropertyValues;
-import com.showtime.ioc.factory.AbstractBeanFactory;
-import com.showtime.ioc.factory.AutowireCapableBeanFactory;
-import com.showtime.ioc.BeanDefinition;
-import com.showtime.ioc.factory.BeanFactory;
-import com.showtime.ioc.HelloWorldService;
-import com.showtime.ioc.io.ResourceLoader;
-import com.showtime.ioc.xml.XmlBeanDefinitionReader;
+import com.showtime.spring.ioc.factory.AbstractBeanFactory;
+import com.showtime.spring.ioc.factory.AutowireCapableBeanFactory;
+import com.showtime.spring.ioc.BeanDefinition;
+import com.showtime.spring.ioc.HelloWorldService;
+import com.showtime.spring.ioc.io.ResourceLoader;
+import com.showtime.spring.ioc.xml.XmlBeanDefinitionReader;
 import org.junit.Test;
 
 import java.util.Map;

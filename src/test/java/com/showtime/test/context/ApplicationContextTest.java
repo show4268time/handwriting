@@ -1,8 +1,8 @@
 package com.showtime.test.context;
 
-import com.showtime.context.ApplicationContext;
-import com.showtime.context.ClassPathXmlApplicationContext;
-import com.showtime.ioc.HelloWorldService;
+import com.showtime.spring.context.ApplicationContext;
+import com.showtime.spring.context.ClassPathXmlApplicationContext;
+import com.showtime.spring.ioc.HelloWorldService;
 import org.junit.Test;
 
 /**

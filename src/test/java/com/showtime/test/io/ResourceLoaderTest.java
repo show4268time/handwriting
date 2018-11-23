@@ -1,7 +1,7 @@
 package com.showtime.test.io;
 
-import com.showtime.ioc.io.Resource;
-import com.showtime.ioc.io.ResourceLoader;
+import com.showtime.spring.ioc.io.Resource;
+import com.showtime.spring.ioc.io.ResourceLoader;
 import org.junit.Assert;
 import org.junit.Test;
 
