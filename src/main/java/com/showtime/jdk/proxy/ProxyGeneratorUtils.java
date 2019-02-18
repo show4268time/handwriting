@@ -1,4 +1,4 @@
-package com.showtime.jdk;
+package com.showtime.jdk.proxy;
 
 import sun.misc.ProxyGenerator;
 

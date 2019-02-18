@@ -1,5 +1,6 @@
 package com.showtime.spring.aop;
 
+import com.showtime.spring.aop.interfaces.AopProxy;
 import org.aopalliance.intercept.MethodInterceptor;
 
 import java.lang.reflect.InvocationHandler;

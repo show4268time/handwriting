@@ -1,4 +1,4 @@
-package com.showtime.jdk;
+package com.showtime.jdk.proxy;
 
 /**
  * Created with IntelliJ IDEA

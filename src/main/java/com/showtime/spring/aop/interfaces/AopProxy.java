@@ -1,4 +1,4 @@
-package com.showtime.spring.aop;
+package com.showtime.spring.aop.interfaces;
 
 /**
  * Created with IntelliJ IDEA
